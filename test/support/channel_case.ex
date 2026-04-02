@@ -1,4 +1,4 @@
-defmodule HelloWeb.ChannelCase do
+defmodule SongOfTheDayWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule HelloWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use HelloWeb.ChannelCase, async: true`, although
+  by setting `use SongOfTheDayWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -20,15 +20,15 @@ defmodule HelloWeb.ChannelCase do
   using do
     quote do
       import Phoenix.ChannelTest
-      import HelloWeb.ChannelCase
+      import SongOfTheDayWeb.ChannelCase
 
-      @endpoint HelloWeb.Endpoint
+      @endpoint SongOfTheDayWeb.Endpoint
     end
   end
 
   setup tags do
     pid =
-      Ecto.Adapters.SQL.Sandbox.start_owner!(Hello.Repo,
+      Ecto.Adapters.SQL.Sandbox.start_owner!(SongOfTheDay.Repo,
         shared: not tags[:async]
       )
 

@@ -1,6 +1,6 @@
 import Config
 
-config :hello, HelloWeb.Endpoint,
+config :song_of_the_day, SongOfTheDayWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true
 

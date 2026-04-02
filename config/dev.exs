@@ -1,6 +1,6 @@
 import Config
 
-config :hello, HelloWeb.Endpoint,
+config :song_of_the_day, SongOfTheDayWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -9,13 +9,13 @@ config :hello, HelloWeb.Endpoint,
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/hello_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/song_of_the_day_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
 
-config :hello, dev_routes: true
+config :song_of_the_day, dev_routes: true
 
-config :hello, Hello.Repo, show_sensitive_data_on_connection_error: true
+config :song_of_the_day, SongOfTheDay.Repo, show_sensitive_data_on_connection_error: true
 
 config :logger, :default_formatter, format: "[$level] $message\n"
 

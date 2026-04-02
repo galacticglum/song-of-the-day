@@ -99,11 +99,11 @@ USER elixir
 ENV USER=elixir
 
 COPY --chown=elixir:elixir --from=dev /public /public
-COPY --chown=elixir:elixir --from=dev /mix/_build/prod/rel/hello ./
+COPY --chown=elixir:elixir --from=dev /mix/_build/prod/rel/song_of_the_day ./
 COPY --chown=elixir:elixir bin/docker-entrypoint-web bin/
 
 ENTRYPOINT ["/app/bin/docker-entrypoint-web"]
 
 EXPOSE 8000
 
-CMD ["bin/hello", "start"]
+CMD ["bin/song_of_the_day", "start"]

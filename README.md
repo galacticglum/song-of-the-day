@@ -105,7 +105,7 @@ worthy additions and changes.
     - Put all config settings with environment variables in `config/runtime.exs` (works with releases)
 - **Phoenix defaults that are changed**:
     - Cookies are encrypted
-    - A `lib/hello/release.ex` module has been added to run migrations with releases
+    - A `lib/song_of_the_day/release.ex` module has been added to run migrations with releases
     - `.formatter.exs` has been configured to use 80 character line lengths
     - An empty `.iex.exs` file has been created so you can customize your IEx sessions however you see fit
     - CSS, JS and image links are referenced with `url(~p"...")` to support optionally using a CDN
@@ -144,8 +144,8 @@ these commands for PowerShell if you want.
 #### Clone this repo anywhere you want and move into the directory:
 
 ```sh
-git clone https://github.com/nickjj/docker-phoenix-example hellophoenix
-cd hellophoenix
+git clone https://github.com/nickjj/docker-phoenix-example song_of_the_day
+cd song_of_the_day
 
 # Optionally checkout a specific tag, such as: git checkout 0.9.0
 ```
@@ -267,9 +267,9 @@ able to run `run` instead of `./run`.*
 
 ## ✨ Running a script to automate renaming the project
 
-The app is named `hello` right now but chances are your app will be a different
+The app is named `song_of_the_day` right now but chances are your app will be a different
 name. Since the app is already created we'll need to do a find / replace on a
-few variants of the string "hello" and update a few Docker related resources.
+few variants of the string "song_of_the_day" and update a few Docker related resources.
 
 And by we I mean I created a zero dependency shell script that does all of the
 heavy lifting for you. All you have to do is run the script below.

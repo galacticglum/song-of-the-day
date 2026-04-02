@@ -184,12 +184,12 @@ yarn:build:css() {
 
 prod:migrate() {
   # Run database migrations in production
-  cmd bin/hello eval "Hello.Release.migrate"
+  cmd bin/song_of_the_day eval "SongOfTheDay.Release.migrate"
 }
 
 prod:remote() {
   # Connect an IEx session to your production system
-  cmd bin/hello remote
+  cmd bin/song_of_the_day remote
 }
 
 clean() {

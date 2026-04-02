@@ -35,7 +35,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-hello-*.tar
+song_of_the_day-*.tar
 
 
 ### Node ######################################################################

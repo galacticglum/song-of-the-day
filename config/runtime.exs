@@ -2,9 +2,9 @@ import Config
 
 url_host = System.fetch_env!("URL_HOST")
 
-config :hello, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
+config :song_of_the_day, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
 
-config :hello, HelloWeb.Endpoint,
+config :song_of_the_day, SongOfTheDayWeb.Endpoint,
   url: [
     scheme: System.get_env("URL_SCHEME", "https"),
     host: url_host,
@@ -18,7 +18,7 @@ config :hello, HelloWeb.Endpoint,
   # It is completely safe to hard code and use this salt value.
   live_view: [signing_salt: "k4yfnQW4r"]
 
-db_user = System.get_env("POSTGRES_USER", "hello")
+db_user = System.get_env("POSTGRES_USER", "song_of_the_day")
 database = System.get_env("POSTGRES_DB", db_user)
 
 database =
@@ -28,7 +28,7 @@ database =
     database
   end
 
-config :hello, Hello.Repo,
+config :song_of_the_day, SongOfTheDay.Repo,
   url: System.get_env("DATABASE_URL"),
   username: db_user,
   password: System.get_env("POSTGRES_PASSWORD", "password"),

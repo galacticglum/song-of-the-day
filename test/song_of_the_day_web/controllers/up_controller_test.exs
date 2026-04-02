@@ -1,0 +1,13 @@
+defmodule SongOfTheDayWeb.UpControllerTest do
+  use SongOfTheDayWeb.ConnCase
+
+  test "up loads", %{conn: conn} do
+    conn = get(conn, ~p"/up")
+    assert html_response(conn, 200)
+  end
+
+  test "up databases loads", %{conn: conn} do
+    conn = get(conn, ~p"/up/databases")
+    assert html_response(conn, 200)
+  end
+end

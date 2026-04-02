@@ -5,23 +5,23 @@
 # is restricted to this project.
 import Config
 
-config :hello,
-  ecto_repos: [Hello.Repo],
+config :song_of_the_day,
+  ecto_repos: [SongOfTheDay.Repo],
   generators: [timestamp_type: :utc_datetime]
 
-config :hello, HelloWeb.Endpoint,
+config :song_of_the_day, SongOfTheDayWeb.Endpoint,
   # Enable both ipv4 and ipv6 on all interfaces. By the way, the port is
   # configured with an environment variable and it's in the runtime.exs config.
   http: [ip: {0, 0, 0, 0, 0, 0, 0, 0}],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
-    formats: [html: HelloWeb.ErrorHTML, json: HelloWeb.ErrorJSON],
+    formats: [html: SongOfTheDayWeb.ErrorHTML, json: SongOfTheDayWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Hello.PubSub,
+  pubsub_server: SongOfTheDay.PubSub,
   live_view: [signing_salt: "aC4Hk8o2"]
 
-config :hello, Hello.Repo, adapter: Ecto.Adapters.Postgres
+config :song_of_the_day, SongOfTheDay.Repo, adapter: Ecto.Adapters.Postgres
 
 config :logger, :default_formatter,
   format: "$time $metadata[$level] $message\n",
@@ -29,7 +29,7 @@ config :logger, :default_formatter,
 
 config :phoenix, :json_library, Jason
 
-config :hello, Hello.Mailer, adapter: Swoosh.Adapters.Local
+config :song_of_the_day, SongOfTheDay.Mailer, adapter: Swoosh.Adapters.Local
 
 config :swoosh, :api_client, false
 

@@ -1,5 +1,5 @@
 {
-  "name": "hello",
+  "name": "song_of_the_day",
   "private": true,
   "dependencies": {
     "phoenix": "1.8.0",

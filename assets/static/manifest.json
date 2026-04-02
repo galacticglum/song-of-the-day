@@ -1,6 +1,6 @@
 {
-    "name": "Hello",
-    "short_name": "Hello",
+    "name": "SongOfTheDay",
+    "short_name": "SongOfTheDay",
     "description": "A Phoenix + Docker example app",
     "display": "standalone",
     "icons": [
